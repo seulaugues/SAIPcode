@@ -1,0 +1,18 @@
+conditioning:
+  method: ps
+  params:
+    scale: 2.4
+data:
+  name: ffhq # choices: ffhq, bedroom, cat, celeba-hq
+  root: ./data/samples/
+
+measurement:
+  operator:
+    name: deblur
+    type: uniform
+    kernel_size: 9
+    intensity: 3.0
+  
+  noise: 
+    name: gaussian
+    sigma: 0.05

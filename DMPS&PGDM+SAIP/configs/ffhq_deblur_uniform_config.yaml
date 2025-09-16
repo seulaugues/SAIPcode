@@ -1,0 +1,18 @@
+conditioning:
+  method: dmps
+  params:
+    scale: 1.2
+data:
+  name: ffhq # choices: ffhq, bedroom, cat, celeba-hq
+  root: ./data/samples/ # address to put the associated images
+
+measurement:
+  operator:
+    name: deblur
+    type: uniform
+    kernel_size: 9
+    intensity: 3.0
+  
+  noise: 
+    name: gaussian
+    sigma: 0.05

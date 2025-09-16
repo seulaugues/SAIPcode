@@ -1,0 +1,18 @@
+conditioning:
+  main_sampler: resample
+  method: ps # Do not touch
+  params:
+    scale: 0.8
+
+data:
+  name: celeb
+  root: ./data/samples/
+
+measurement:  
+  operator:
+    name: high_dynamic_range
+    scale: 2.0
+
+  noise:
+    name: gaussian
+    sigma: 0.01

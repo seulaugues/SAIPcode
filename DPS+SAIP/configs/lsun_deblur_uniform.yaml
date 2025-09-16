@@ -1,0 +1,21 @@
+conditioning:
+  method: ps
+  params:
+    scale: 1.7
+
+data:
+  name: bedroom # choices: ffhq, bedroom, cat, celeba-hq
+  root: ./data/samples_bedroom/ # address to put the associated images
+
+
+
+measurement:
+  operator:
+    name: deblur
+    type: uniform
+    kernel_size: 9
+    intensity: 3.0
+  
+  noise: 
+    name: gaussian
+    sigma: 0.05

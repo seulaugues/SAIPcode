@@ -1,0 +1,17 @@
+conditioning:
+  method: ps
+  params:
+    scale: 1.3
+
+data:
+  name: ffhq # choices: ffhq, bedroom, cat, celeba-hq
+  root: ./data/samples/
+
+measurement:
+  operator:
+    name: denoise
+    in_shape: !!python/tuple [1, 3, 256, 256]
+  
+  noise: 
+    name: gaussian
+    sigma: 0.5

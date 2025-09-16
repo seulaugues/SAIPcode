@@ -1,0 +1,22 @@
+conditioning:
+  method: pgdm
+  params:
+    scale: 3
+
+data:
+  name: bedroom # choices: ffhq, bedroom, cat, celeba-hq
+  root: ./data/samples_bedroom/ # address to put the associated images
+
+measurement:
+  operator:
+    name: inpainting
+  mask_opt:
+    mask_type: random
+    # mask_len_range: !!python/tuple [128, 129]  # for box
+    mask_prob_range: !!python/tuple [0.9, 0.9]  # for random
+    image_size: 256
+
+
+  noise:
+    name: gaussian
+    sigma: 0.05
